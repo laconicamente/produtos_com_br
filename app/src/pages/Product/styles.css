@@ -1,0 +1,28 @@
+.product-info {
+    position: relative;
+    width: 100%;
+    max-width: 890px;
+    background-color: #FFF;
+    min-height: 90vh;
+    margin: 0 auto;
+    margin-top:15px;
+}
+.product-info p, .product-info h1{
+    width: 100%;
+}
+.product-info .back-button{
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    padding: 10px 15px;
+    color: #FFF;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.product-info .back-button:hover{
+    background-color: #FFF;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import './styles.css';
+import  { Link } from 'react-router-dom';
 
 export default class Main extends Component {
     state = {
@@ -23,9 +24,9 @@ export default class Main extends Component {
     }
 
     prevPage = () => {
-        const { page, productInfo } = this.state;
+        const { page } = this.state;
 
-        if ( page == 1) return;
+        if ( page === 1) return;
  
         const pageNumber = page - 1;
 
@@ -51,7 +52,7 @@ export default class Main extends Component {
             <article className="flex flex-start width-100 flex-wrap" key={product._id}>
                 <h2>{product.title}</h2>
                 <p>{product.description}</p>
-                <a href={product.url} target="_blank">Acessar</a>
+                <Link to={`/products/${product._id}`}>Acessar</Link>
             </article>
         ))}
         <div className="width-100 flex pagination">
